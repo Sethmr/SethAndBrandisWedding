@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D49FA263158C2B32671B58E /* Pods_SethAndBrandisWeddingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19833A415C43104E64898BB /* Pods_SethAndBrandisWeddingUITests.framework */; };
+		BFBA72A220A7B0E30057771B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72A120A7B0E30057771B /* OnboardingViewController.swift */; };
+		BFBA72A420A7B2EC0057771B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72A320A7B2EC0057771B /* Extensions.swift */; };
+		BFBA72A620A7B2F30057771B /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72A520A7B2F30057771B /* UIExtensions.swift */; };
+		BFBA72A820A7B3030057771B /* UIImage+ImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72A720A7B3030057771B /* UIImage+ImageEffects.swift */; };
+		BFBA72AA20A7B3180057771B /* FontStyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72A920A7B3180057771B /* FontStyleGuide.swift */; };
+		BFBA72B420A7B3E20057771B /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA72B120A7B35B0057771B /* Montserrat-Bold.otf */; };
+		BFBA72B520A7B3E20057771B /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA72B020A7B35B0057771B /* Montserrat-ExtraBold.otf */; };
+		BFBA72B620A7B3E20057771B /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA72AE20A7B35B0057771B /* Montserrat-Light.otf */; };
+		BFBA72B720A7B3E20057771B /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA72B220A7B35B0057771B /* Montserrat-Medium.otf */; };
+		BFBA72B820A7B3E20057771B /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA72B320A7B35B0057771B /* Montserrat-Regular.otf */; };
+		BFBA72B920A7B3E20057771B /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFBA72AF20A7B35B0057771B /* Montserrat-SemiBold.otf */; };
+		BFBA72BB20A7B63C0057771B /* OnboardingCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72BA20A7B63C0057771B /* OnboardingCellNode.swift */; };
+		BFBA72BD20A7B6CD0057771B /* ASDisplayButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72BC20A7B6CD0057771B /* ASDisplayButtonNode.swift */; };
+		BFBA72BF20A7B7110057771B /* OnboardingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72BE20A7B7110057771B /* OnboardingType.swift */; };
+		BFBA72C220A7BEAF0057771B /* ScavengerHuntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72C120A7BEAF0057771B /* ScavengerHuntViewController.swift */; };
+		BFBA72C520A7CF350057771B /* ScavengerTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72C420A7CF350057771B /* ScavengerTask.swift */; };
+		BFBA72C720A7D08A0057771B /* ScavengerHuntCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72C620A7D08A0057771B /* ScavengerHuntCellNode.swift */; };
+		BFBA72C920A7D5700057771B /* ScavengerHuntHeaderCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72C820A7D5700057771B /* ScavengerHuntHeaderCellNode.swift */; };
+		BFBA72CB20A7DA800057771B /* ScavengerHuntDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72CA20A7DA800057771B /* ScavengerHuntDescriptionViewController.swift */; };
+		BFBA72CD20A895780057771B /* TransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72CC20A895780057771B /* TransitionDelegate.swift */; };
+		BFBA72CF20A895860057771B /* CoverHorizontalPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72CE20A895860057771B /* CoverHorizontalPresentAnimationController.swift */; };
+		BFBA72D120A895910057771B /* CoverHorizontalDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72D020A895910057771B /* CoverHorizontalDismissAnimationController.swift */; };
+		BFBA72D420A895DE0057771B /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72D320A895DD0057771B /* PresentationController.swift */; };
+		BFBA72D620A899100057771B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72D520A899100057771B /* Storage.swift */; };
+		BFBA72D820A899940057771B /* ColorStyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72D720A899940057771B /* ColorStyleGuide.swift */; };
 		BFFF227320A77BB000220446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF227220A77BB000220446 /* AppDelegate.swift */; };
 		BFFF227520A77BB000220446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF227420A77BB000220446 /* ViewController.swift */; };
 		BFFF227820A77BB000220446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFF227620A77BB000220446 /* Main.storyboard */; };
@@ -14,6 +40,8 @@
 		BFFF227D20A77BB100220446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFF227B20A77BB100220446 /* LaunchScreen.storyboard */; };
 		BFFF228820A77BB100220446 /* SethAndBrandisWeddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF228720A77BB100220446 /* SethAndBrandisWeddingTests.swift */; };
 		BFFF229320A77BB100220446 /* SethAndBrandisWeddingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF229220A77BB100220446 /* SethAndBrandisWeddingUITests.swift */; };
+		FC33245DAC1692DCCEDAA77D /* Pods_SethAndBrandisWedding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A43BA275C2B62D14842922 /* Pods_SethAndBrandisWedding.framework */; };
+		FC5F6B6CED742FEA84C6CAEB /* Pods_SethAndBrandisWeddingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E95082A243AA76ECCD9EF12 /* Pods_SethAndBrandisWeddingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +62,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240327D1D6894A9F0A9D3BC0 /* Pods-SethAndBrandisWedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SethAndBrandisWedding.release.xcconfig"; path = "Pods/Target Support Files/Pods-SethAndBrandisWedding/Pods-SethAndBrandisWedding.release.xcconfig"; sourceTree = "<group>"; };
+		34A43BA275C2B62D14842922 /* Pods_SethAndBrandisWedding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SethAndBrandisWedding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		354C95A8831394B637BFE2C3 /* Pods-SethAndBrandisWeddingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SethAndBrandisWeddingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SethAndBrandisWeddingUITests/Pods-SethAndBrandisWeddingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		35ECCF38925EE093327EDF14 /* Pods-SethAndBrandisWedding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SethAndBrandisWedding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SethAndBrandisWedding/Pods-SethAndBrandisWedding.debug.xcconfig"; sourceTree = "<group>"; };
+		6FEC6981FB78E5F0E6FA77C5 /* Pods-SethAndBrandisWeddingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SethAndBrandisWeddingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SethAndBrandisWeddingUITests/Pods-SethAndBrandisWeddingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9E95082A243AA76ECCD9EF12 /* Pods_SethAndBrandisWeddingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SethAndBrandisWeddingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFBA72A120A7B0E30057771B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		BFBA72A320A7B2EC0057771B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BFBA72A520A7B2F30057771B /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		BFBA72A720A7B3030057771B /* UIImage+ImageEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageEffects.swift"; sourceTree = "<group>"; };
+		BFBA72A920A7B3180057771B /* FontStyleGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStyleGuide.swift; sourceTree = "<group>"; };
+		BFBA72AE20A7B35B0057771B /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		BFBA72AF20A7B35B0057771B /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		BFBA72B020A7B35B0057771B /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		BFBA72B120A7B35B0057771B /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		BFBA72B220A7B35B0057771B /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		BFBA72B320A7B35B0057771B /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		BFBA72BA20A7B63C0057771B /* OnboardingCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellNode.swift; sourceTree = "<group>"; };
+		BFBA72BC20A7B6CD0057771B /* ASDisplayButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASDisplayButtonNode.swift; sourceTree = "<group>"; };
+		BFBA72BE20A7B7110057771B /* OnboardingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingType.swift; sourceTree = "<group>"; };
+		BFBA72C120A7BEAF0057771B /* ScavengerHuntViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntViewController.swift; sourceTree = "<group>"; };
+		BFBA72C420A7CF350057771B /* ScavengerTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerTask.swift; sourceTree = "<group>"; };
+		BFBA72C620A7D08A0057771B /* ScavengerHuntCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntCellNode.swift; sourceTree = "<group>"; };
+		BFBA72C820A7D5700057771B /* ScavengerHuntHeaderCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntHeaderCellNode.swift; sourceTree = "<group>"; };
+		BFBA72CA20A7DA800057771B /* ScavengerHuntDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntDescriptionViewController.swift; sourceTree = "<group>"; };
+		BFBA72CC20A895780057771B /* TransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDelegate.swift; sourceTree = "<group>"; };
+		BFBA72CE20A895860057771B /* CoverHorizontalPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverHorizontalPresentAnimationController.swift; sourceTree = "<group>"; };
+		BFBA72D020A895910057771B /* CoverHorizontalDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverHorizontalDismissAnimationController.swift; sourceTree = "<group>"; };
+		BFBA72D320A895DD0057771B /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		BFBA72D520A899100057771B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BFBA72D720A899940057771B /* ColorStyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyleGuide.swift; sourceTree = "<group>"; };
 		BFFF226F20A77BB000220446 /* SethAndBrandisWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SethAndBrandisWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF227220A77BB000220446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFF227420A77BB000220446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +106,10 @@
 		BFFF228E20A77BB100220446 /* SethAndBrandisWeddingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SethAndBrandisWeddingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF229220A77BB100220446 /* SethAndBrandisWeddingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SethAndBrandisWeddingUITests.swift; sourceTree = "<group>"; };
 		BFFF229420A77BB100220446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFFF22AB20A7AE7500220446 /* SethAndBrandisWedding-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SethAndBrandisWedding-Bridging-Header.h"; sourceTree = "<group>"; };
+		D9F8254A9B0640E8CBE76B52 /* Pods-SethAndBrandisWeddingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SethAndBrandisWeddingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SethAndBrandisWeddingTests/Pods-SethAndBrandisWeddingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF2A8902A4070A744BF1B96A /* Pods-SethAndBrandisWeddingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SethAndBrandisWeddingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SethAndBrandisWeddingTests/Pods-SethAndBrandisWeddingTests.release.xcconfig"; sourceTree = "<group>"; };
+		F19833A415C43104E64898BB /* Pods_SethAndBrandisWeddingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SethAndBrandisWeddingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC33245DAC1692DCCEDAA77D /* Pods_SethAndBrandisWedding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5F6B6CED742FEA84C6CAEB /* Pods_SethAndBrandisWeddingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +133,80 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D49FA263158C2B32671B58E /* Pods_SethAndBrandisWeddingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B61B41A0DC0495E013BDDA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34A43BA275C2B62D14842922 /* Pods_SethAndBrandisWedding.framework */,
+				9E95082A243AA76ECCD9EF12 /* Pods_SethAndBrandisWeddingTests.framework */,
+				F19833A415C43104E64898BB /* Pods_SethAndBrandisWeddingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63C833318D4C2CB0FFA339B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35ECCF38925EE093327EDF14 /* Pods-SethAndBrandisWedding.debug.xcconfig */,
+				240327D1D6894A9F0A9D3BC0 /* Pods-SethAndBrandisWedding.release.xcconfig */,
+				D9F8254A9B0640E8CBE76B52 /* Pods-SethAndBrandisWeddingTests.debug.xcconfig */,
+				DF2A8902A4070A744BF1B96A /* Pods-SethAndBrandisWeddingTests.release.xcconfig */,
+				6FEC6981FB78E5F0E6FA77C5 /* Pods-SethAndBrandisWeddingUITests.debug.xcconfig */,
+				354C95A8831394B637BFE2C3 /* Pods-SethAndBrandisWeddingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFBA72AD20A7B33C0057771B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA72B120A7B35B0057771B /* Montserrat-Bold.otf */,
+				BFBA72B020A7B35B0057771B /* Montserrat-ExtraBold.otf */,
+				BFBA72AE20A7B35B0057771B /* Montserrat-Light.otf */,
+				BFBA72B220A7B35B0057771B /* Montserrat-Medium.otf */,
+				BFBA72B320A7B35B0057771B /* Montserrat-Regular.otf */,
+				BFBA72AF20A7B35B0057771B /* Montserrat-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BFBA72C020A7BD980057771B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA72A120A7B0E30057771B /* OnboardingViewController.swift */,
+				BFBA72BA20A7B63C0057771B /* OnboardingCellNode.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BFBA72C320A7BEF80057771B /* SavengerHunt */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA72C120A7BEAF0057771B /* ScavengerHuntViewController.swift */,
+				BFBA72C820A7D5700057771B /* ScavengerHuntHeaderCellNode.swift */,
+				BFBA72C620A7D08A0057771B /* ScavengerHuntCellNode.swift */,
+				BFBA72CA20A7DA800057771B /* ScavengerHuntDescriptionViewController.swift */,
+			);
+			path = SavengerHunt;
+			sourceTree = "<group>";
+		};
+		BFBA72D220A895980057771B /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA72CC20A895780057771B /* TransitionDelegate.swift */,
+				BFBA72D320A895DD0057771B /* PresentationController.swift */,
+				BFBA72CE20A895860057771B /* CoverHorizontalPresentAnimationController.swift */,
+				BFBA72D020A895910057771B /* CoverHorizontalDismissAnimationController.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		BFFF226620A77BB000220446 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +214,8 @@
 				BFFF228620A77BB100220446 /* SethAndBrandisWeddingTests */,
 				BFFF229120A77BB100220446 /* SethAndBrandisWeddingUITests */,
 				BFFF227020A77BB000220446 /* Products */,
+				63C833318D4C2CB0FFA339B3 /* Pods */,
+				3B61B41A0DC0495E013BDDA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +233,25 @@
 			isa = PBXGroup;
 			children = (
 				BFFF227220A77BB000220446 /* AppDelegate.swift */,
+				BFFF227E20A77BB100220446 /* Info.plist */,
 				BFFF227420A77BB000220446 /* ViewController.swift */,
 				BFFF227620A77BB000220446 /* Main.storyboard */,
+				BFBA72A320A7B2EC0057771B /* Extensions.swift */,
+				BFBA72A920A7B3180057771B /* FontStyleGuide.swift */,
+				BFBA72D720A899940057771B /* ColorStyleGuide.swift */,
+				BFBA72D520A899100057771B /* Storage.swift */,
+				BFBA72C420A7CF350057771B /* ScavengerTask.swift */,
+				BFBA72D220A895980057771B /* Transitions */,
+				BFBA72C020A7BD980057771B /* Onboarding */,
+				BFBA72C320A7BEF80057771B /* SavengerHunt */,
+				BFBA72BC20A7B6CD0057771B /* ASDisplayButtonNode.swift */,
+				BFBA72A720A7B3030057771B /* UIImage+ImageEffects.swift */,
+				BFBA72BE20A7B7110057771B /* OnboardingType.swift */,
+				BFBA72AD20A7B33C0057771B /* Fonts */,
+				BFBA72A520A7B2F30057771B /* UIExtensions.swift */,
+				BFFF22AB20A7AE7500220446 /* SethAndBrandisWedding-Bridging-Header.h */,
 				BFFF227920A77BB100220446 /* Assets.xcassets */,
 				BFFF227B20A77BB100220446 /* LaunchScreen.storyboard */,
-				BFFF227E20A77BB100220446 /* Info.plist */,
 			);
 			path = SethAndBrandisWedding;
 			sourceTree = "<group>";
@@ -132,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFF229720A77BB100220446 /* Build configuration list for PBXNativeTarget "SethAndBrandisWedding" */;
 			buildPhases = (
+				6FBE66D762B80C722D76E072 /* [CP] Check Pods Manifest.lock */,
 				BFFF226B20A77BB000220446 /* Sources */,
 				BFFF226C20A77BB000220446 /* Frameworks */,
 				BFFF226D20A77BB000220446 /* Resources */,
+				3FD652F7F0512FF821A5AACD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +300,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFF229A20A77BB100220446 /* Build configuration list for PBXNativeTarget "SethAndBrandisWeddingTests" */;
 			buildPhases = (
+				A4DC92A6A96E32E459E2D8DD /* [CP] Check Pods Manifest.lock */,
 				BFFF227F20A77BB100220446 /* Sources */,
 				BFFF228020A77BB100220446 /* Frameworks */,
 				BFFF228120A77BB100220446 /* Resources */,
@@ -167,6 +319,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFF229D20A77BB100220446 /* Build configuration list for PBXNativeTarget "SethAndBrandisWeddingUITests" */;
 			buildPhases = (
+				37A45F631B43A68FCE236070 /* [CP] Check Pods Manifest.lock */,
 				BFFF228A20A77BB100220446 /* Sources */,
 				BFFF228B20A77BB100220446 /* Frameworks */,
 				BFFF228C20A77BB100220446 /* Resources */,
@@ -193,6 +346,7 @@
 				TargetAttributes = {
 					BFFF226E20A77BB000220446 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					BFFF228220A77BB100220446 = {
 						CreatedOnToolsVersion = 9.3;
@@ -229,6 +383,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBA72B420A7B3E20057771B /* Montserrat-Bold.otf in Resources */,
+				BFBA72B520A7B3E20057771B /* Montserrat-ExtraBold.otf in Resources */,
+				BFBA72B620A7B3E20057771B /* Montserrat-Light.otf in Resources */,
+				BFBA72B720A7B3E20057771B /* Montserrat-Medium.otf in Resources */,
+				BFBA72B820A7B3E20057771B /* Montserrat-Regular.otf in Resources */,
+				BFBA72B920A7B3E20057771B /* Montserrat-SemiBold.otf in Resources */,
 				BFFF227D20A77BB100220446 /* LaunchScreen.storyboard in Resources */,
 				BFFF227A20A77BB100220446 /* Assets.xcassets in Resources */,
 				BFFF227820A77BB000220446 /* Main.storyboard in Resources */,
@@ -251,13 +411,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37A45F631B43A68FCE236070 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SethAndBrandisWeddingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FD652F7F0512FF821A5AACD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SethAndBrandisWedding/Pods-SethAndBrandisWedding-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cloudinary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SethAndBrandisWedding/Pods-SethAndBrandisWedding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FBE66D762B80C722D76E072 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SethAndBrandisWedding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4DC92A6A96E32E459E2D8DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SethAndBrandisWeddingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFFF226B20A77BB000220446 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BFFF227520A77BB000220446 /* ViewController.swift in Sources */,
+				BFBA72CB20A7DA800057771B /* ScavengerHuntDescriptionViewController.swift in Sources */,
+				BFBA72A220A7B0E30057771B /* OnboardingViewController.swift in Sources */,
+				BFBA72C920A7D5700057771B /* ScavengerHuntHeaderCellNode.swift in Sources */,
+				BFBA72D420A895DE0057771B /* PresentationController.swift in Sources */,
+				BFBA72C220A7BEAF0057771B /* ScavengerHuntViewController.swift in Sources */,
+				BFBA72C520A7CF350057771B /* ScavengerTask.swift in Sources */,
+				BFBA72BF20A7B7110057771B /* OnboardingType.swift in Sources */,
+				BFBA72AA20A7B3180057771B /* FontStyleGuide.swift in Sources */,
+				BFBA72D620A899100057771B /* Storage.swift in Sources */,
+				BFBA72A820A7B3030057771B /* UIImage+ImageEffects.swift in Sources */,
+				BFBA72CD20A895780057771B /* TransitionDelegate.swift in Sources */,
+				BFBA72BB20A7B63C0057771B /* OnboardingCellNode.swift in Sources */,
 				BFFF227320A77BB000220446 /* AppDelegate.swift in Sources */,
+				BFBA72CF20A895860057771B /* CoverHorizontalPresentAnimationController.swift in Sources */,
+				BFBA72A620A7B2F30057771B /* UIExtensions.swift in Sources */,
+				BFBA72D820A899940057771B /* ColorStyleGuide.swift in Sources */,
+				BFBA72A420A7B2EC0057771B /* Extensions.swift in Sources */,
+				BFBA72C720A7D08A0057771B /* ScavengerHuntCellNode.swift in Sources */,
+				BFBA72BD20A7B6CD0057771B /* ASDisplayButtonNode.swift in Sources */,
+				BFBA72D120A895910057771B /* CoverHorizontalDismissAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,42 +694,52 @@
 		};
 		BFFF229820A77BB100220446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35ECCF38925EE093327EDF14 /* Pods-SethAndBrandisWedding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4LMLWUZ6G;
+				DEVELOPMENT_TEAM = 6576K4J973;
 				INFOPLIST_FILE = SethAndBrandisWedding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Seth.me.SethAndBrandisWedding;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SethAndBrandisWedding.Seth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/SethAndBrandisWedding/SethAndBrandisWedding-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BFFF229920A77BB100220446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 240327D1D6894A9F0A9D3BC0 /* Pods-SethAndBrandisWedding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4LMLWUZ6G;
+				DEVELOPMENT_TEAM = 6576K4J973;
 				INFOPLIST_FILE = SethAndBrandisWedding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Seth.me.SethAndBrandisWedding;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SethAndBrandisWedding.Seth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/SethAndBrandisWedding/SethAndBrandisWedding-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		BFFF229B20A77BB100220446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F8254A9B0640E8CBE76B52 /* Pods-SethAndBrandisWeddingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +761,7 @@
 		};
 		BFFF229C20A77BB100220446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2A8902A4070A744BF1B96A /* Pods-SethAndBrandisWeddingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +783,7 @@
 		};
 		BFFF229E20A77BB100220446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FEC6981FB78E5F0E6FA77C5 /* Pods-SethAndBrandisWeddingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +804,7 @@
 		};
 		BFFF229F20A77BB100220446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 354C95A8831394B637BFE2C3 /* Pods-SethAndBrandisWeddingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

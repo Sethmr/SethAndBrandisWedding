@@ -1,0 +1,60 @@
+PODS:
+  - Alamofire (4.6.0)
+  - Cloudinary (2.2.2):
+    - Alamofire (~> 4.6.0)
+  - PINCache (3.0.1-beta.6):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
+    - PINCache/Core (= 3.0.1-beta.6)
+  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.6):
+    - PINOperation (~> 1.1.0)
+  - PINOperation (1.1.1)
+  - PINRemoteImage/Core (3.0.0-beta.13):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.13):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.13):
+    - PINCache (= 3.0.1-beta.6)
+    - PINRemoteImage/Core
+  - PKHUD (5.0.0)
+  - SwiftLint (0.25.1)
+  - Texture (2.6):
+    - Texture/PINRemoteImage (= 2.6)
+  - Texture/Core (2.6)
+  - Texture/PINRemoteImage (2.6):
+    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6.0)
+  - Cloudinary (~> 2.2.2)
+  - PKHUD
+  - SwiftLint (~> 0.25.0)
+  - Texture (~> 2.6)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Cloudinary
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - PKHUD
+    - SwiftLint
+    - Texture
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Cloudinary: 5dff38fd3a8d3277ef05ced910a6bc567738dddb
+  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
+  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
+  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+  Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
+
+PODFILE CHECKSUM: 3756da73696fa3671b102f86ce54000213e49504
+
+COCOAPODS: 1.5.2

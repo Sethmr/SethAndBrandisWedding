@@ -6,18 +6,20 @@
 //  Copyright © 2018 Seth Rininger. All rights reserved.
 //
 
-import UIKit
+import AsyncDisplayKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    static var name: String = ""
+    static var safeInsets: UIEdgeInsets = .zero
+    static var screenWidth: CGFloat = 0
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ViewController.safeInsets = safeInsets
+        ViewController.screenWidth = UIScreen.main.bounds.width
+        let vc = OnboardingViewController()
+        present(vc, animated: false)
     }
 
 

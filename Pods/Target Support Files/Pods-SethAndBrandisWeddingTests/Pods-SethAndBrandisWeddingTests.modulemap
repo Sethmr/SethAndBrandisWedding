@@ -1,0 +1,6 @@
+framework module Pods_SethAndBrandisWeddingTests {
+  umbrella header "Pods-SethAndBrandisWeddingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

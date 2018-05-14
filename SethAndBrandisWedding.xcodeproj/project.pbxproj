@@ -28,6 +28,7 @@
 		BFBA72D620A899100057771B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72D520A899100057771B /* Storage.swift */; };
 		BFBA72D820A899940057771B /* ColorStyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72D720A899940057771B /* ColorStyleGuide.swift */; };
 		BFBA72DA20A930070057771B /* CloudinaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72D920A930070057771B /* CloudinaryService.swift */; };
+		BFBA72DC20A957F00057771B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA72DB20A957F00057771B /* SettingsViewController.swift */; };
 		BFFF227320A77BB000220446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF227220A77BB000220446 /* AppDelegate.swift */; };
 		BFFF227520A77BB000220446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF227420A77BB000220446 /* ViewController.swift */; };
 		BFFF227820A77BB000220446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFF227620A77BB000220446 /* Main.storyboard */; };
@@ -83,6 +84,7 @@
 		BFBA72D520A899100057771B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		BFBA72D720A899940057771B /* ColorStyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyleGuide.swift; sourceTree = "<group>"; };
 		BFBA72D920A930070057771B /* CloudinaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudinaryService.swift; sourceTree = "<group>"; };
+		BFBA72DB20A957F00057771B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BFFF226F20A77BB000220446 /* SethAndBrandisWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SethAndBrandisWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF227220A77BB000220446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFF227420A77BB000220446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BFBA72C820A7D5700057771B /* ScavengerHuntHeaderCellNode.swift */,
 				BFBA72C620A7D08A0057771B /* ScavengerHuntCellNode.swift */,
 				BFBA72CA20A7DA800057771B /* ScavengerHuntDescriptionViewController.swift */,
+				BFBA72DB20A957F00057771B /* SettingsViewController.swift */,
 			);
 			path = SavengerHunt;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				BFBA72BB20A7B63C0057771B /* OnboardingCellNode.swift in Sources */,
 				BFFF227320A77BB000220446 /* AppDelegate.swift in Sources */,
 				BFBA72CF20A895860057771B /* CoverHorizontalPresentAnimationController.swift in Sources */,
+				BFBA72DC20A957F00057771B /* SettingsViewController.swift in Sources */,
 				BFBA72A620A7B2F30057771B /* UIExtensions.swift in Sources */,
 				BFBA72D820A899940057771B /* ColorStyleGuide.swift in Sources */,
 				BFBA72A420A7B2EC0057771B /* Extensions.swift in Sources */,

@@ -86,8 +86,35 @@ class ScavengerHuntHeaderCellNode: ASCellNode {
         return node
     }()
 
+    lazy var settingsButton: ASButtonNode = {
+        let node = ASButtonNode()
+        node.setImage(#imageLiteral(resourceName: "SettingsIcon"), for: .normal)
+        node.contentMode = .scaleToFill
+        node.imageNode.style.preferredLayoutSize = ASLayoutSize(
+            width: ASDimension(unit: .points, value: 30.clasp),
+            height: ASDimension(unit: .points, value: 29.clasp)
+        )
+        node.style.preferredLayoutSize = ASLayoutSize(
+            width: ASDimension(unit: .points, value: 60.clasp),
+            height: ASDimension(unit: .points, value: 70.clasp)
+        )
+        node.addTarget(self, action: #selector(settingsWasTapped), forControlEvents: .touchUpInside)
+        return node
+    }()
+
+    @objc func settingsWasTapped(_ sender: ASButtonNode) {
+        let vc = SettingsViewController { [weak self] in
+            self?.closestViewController?.dismiss(animated: true)
+        }
+        vc.transitioningDelegate = TransitionDelegate.shared
+        vc.modalPresentationStyle = .custom
+        self.closestViewController?.present(vc, animated: true)
+    }
+
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let stack = ASStackLayoutSpec(direction: .vertical, spacing: 20.clasp, justifyContent: .start, alignItems: .stretch, children: [titleNode, subtitleNode, countNode])
-        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 18, bottom: 0, right: 18).clasp, child: stack)
+        let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 18, bottom: 0, right: 18).clasp, child: stack)
+        let settingsSpec = ASRelativeLayoutSpec(horizontalPosition: .end, verticalPosition: .start, sizingOption: .minimumSize, child: settingsButton)
+        return ASOverlayLayoutSpec(child: insetSpec, overlay: settingsSpec)
     }
 }

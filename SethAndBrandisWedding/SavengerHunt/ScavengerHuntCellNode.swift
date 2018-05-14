@@ -8,15 +8,22 @@
 
 import AsyncDisplayKit
 
+protocol ScavengerHuntCellNodeDelegate: class {
+    func cellWasTapped(with task: ScavengerTask)
+}
+
 class ScavengerHuntCellNode: ASCellNode {
 
     let task: ScavengerTask
+    weak var delegate: ScavengerHuntCellNodeDelegate?
 
-    init(task: ScavengerTask) {
+    init(task: ScavengerTask, delegate: ScavengerHuntCellNodeDelegate?) {
         self.task = task
+        self.delegate = delegate
         super.init()
         automaticallyManagesSubnodes = true
         backgroundColor = .white
+        selectionStyle = .none
     }
 
     lazy var imageNode: ASNetworkImageNode? = {
@@ -77,6 +84,16 @@ class ScavengerHuntCellNode: ASCellNode {
         return node
     }()
 
+    lazy var buttonNode: ASDisplayButtonNode = {
+        let node = ASDisplayButtonNode()
+        node.addTarget(self, action: #selector(cellWasTapped), forControlEvents: .touchUpInside)
+        return node
+    }()
+
+    @objc func cellWasTapped(_ sender: ASButtonNode) {
+        delegate?.cellWasTapped(with: task)
+    }
+
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let textStack = ASStackLayoutSpec(direction: .vertical, spacing: 5.clasp, justifyContent: .center, alignItems: .start, children: [titleNode, subtitleNode])
         textStack.flexWrap = .wrap
@@ -89,7 +106,7 @@ class ScavengerHuntCellNode: ASCellNode {
         }
         let relativeSpec = ASRelativeLayoutSpec(horizontalPosition: .end, verticalPosition: .center, sizingOption: .minimumSize, child: arrowNode)
         let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16.clasp), child: relativeSpec)
-        return ASWrapperLayoutSpec(layoutElements: [finalSpec, insetSpec])
+        return buttonNode.finalLayoutSpec(with: ASWrapperLayoutSpec(layoutElements: [finalSpec, insetSpec]))
     }
 
 }

@@ -13,6 +13,7 @@ class ScavengerHuntHeaderCellNode: ASCellNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
+        selectionStyle = .none
         backgroundColor = UIColor.mainColor
         NotificationCenter.default.addObserver(
             self,

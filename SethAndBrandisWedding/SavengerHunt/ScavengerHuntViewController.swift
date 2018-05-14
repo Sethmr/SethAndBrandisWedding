@@ -49,46 +49,29 @@ class ScavengerHuntViewController: ASViewController<ASDisplayNode> {
     }()
 
     func generateTasks() {
-        guard ScavengerTask.tasks.count == 0 else { return }
+        //guard ScavengerTask.tasks.count == 0 else { return }
         ScavengerTask.tasks = [
+            ScavengerTask(title: "Laughter", subtitle: "Get the best picture of a smile of the night.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "Bride & Groom Kissing", subtitle: "Where there's one, there may be many. Where there's many, there may be one picture.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "Dancing Feet", subtitle: "Who stepped on my blue suede shoes?", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "A Selfie", subtitle: "Can you capture yourself better than anyone else?", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "The Best Man", subtitle: "Get a picture of someone laughing at the best man or the best man laughing.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "The Inlaws", subtitle: "Take a picture of yourself with someone that has the same relationship (co-worker counts) to the Bride/Groom as you do to the other one of the two.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "A Toast", subtitle: "Does one toast rule them all?", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "Your Table", subtitle: "Each table has a story to tell.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "The Wedding Party", subtitle: "An opportune time comes but once. Watch and wait for the right moment when your hand is steady and lens is full.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "An Oak Tree", subtitle: "The tree stands taller when people linger.", imageUrl: "", isCompleted: false),
             ScavengerTask(
                 title: "Opposites Attract",
-                subtitle: "Take a picture with someone of the opposite sex on opposite side of the family with different color hair than you.",
+                subtitle: "Take a picture with someone of the opposite sex that has different color hair and eyes than you.",
                 imageUrl: "",
                 isCompleted: false
             ),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false),
-            ScavengerTask(title: "", subtitle: "", imageUrl: "", isCompleted: false)
+            ScavengerTask(title: "A Tasty Bite", subtitle: "Get a picture of cake going into a mouth.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "Worst Dancer", subtitle: "Is it me? Is it you? Two left feet are somewhere and I think you know who.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "The Parents", subtitle: "Get a picture of the bride or groom with their parents.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "Publix meets Vimvest", subtitle: "Meet someone new that Seth or Brandi works with and grab a selfie.", imageUrl: "", isCompleted: false),
+            ScavengerTask(title: "Quality Over Quanitity", subtitle: "Is there a better photo to be found? Give me the nights best photo... or else!", imageUrl: "", isCompleted: false)
         ]
     }
 
@@ -121,23 +104,6 @@ extension ScavengerHuntViewController: ASTableDelegate {
         return ASSizeRange(min: size, max: size)
     }
 
-    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.row < ScavengerTask.tasks.count else { return }
-        let task = ScavengerTask.tasks[indexPath.row]
-        let vc = ScavengerHuntDescriptionViewController(task: task) { [weak self] newTask in
-            self?.dismiss(animated: true) {
-                self?.tableNode.deselectRow(at: indexPath, animated: true)
-                ScavengerTask.tasks[indexPath.row] = newTask
-                self?.tableNode.reloadRows(at: [indexPath], with: .automatic)
-                ScavengerTask.updateTaskInformation()
-                ScavengerTask.save()
-            }
-        }
-        vc.modalPresentationStyle = .custom
-        vc.transitioningDelegate = TransitionDelegate.shared
-        self.present(vc, animated: true)
-    }
-
 }
 
 extension ScavengerHuntViewController: ASTableDataSource {
@@ -149,8 +115,27 @@ extension ScavengerHuntViewController: ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         return {
             let task = ScavengerTask.tasks[indexPath.row]
-            return ScavengerHuntCellNode(task: task)
+            return ScavengerHuntCellNode(task: task, delegate: self)
         }
+    }
+
+}
+
+extension ScavengerHuntViewController: ScavengerHuntCellNodeDelegate {
+
+    func cellWasTapped(with task: ScavengerTask) {
+        let indexPath = IndexPath(row: ScavengerTask.tasks.index(where: { $0.title == task.title }) ?? 0, section: 0)
+        let vc = ScavengerHuntDescriptionViewController(task: task) { [weak self] newTask in
+            self?.dismiss(animated: true) {
+                ScavengerTask.tasks[indexPath.row] = newTask
+                self?.tableNode.reloadRows(at: [indexPath], with: .automatic)
+                ScavengerTask.updateTaskInformation()
+                ScavengerTask.save()
+            }
+        }
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = TransitionDelegate.shared
+        self.present(vc, animated: true)
     }
 
 }

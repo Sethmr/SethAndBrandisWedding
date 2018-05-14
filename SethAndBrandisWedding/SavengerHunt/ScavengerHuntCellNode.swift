@@ -33,10 +33,10 @@ class ScavengerHuntCellNode: ASCellNode {
 
     lazy var arrowNode: ASImageNode = {
         let node = ASImageNode()
-        node.image = #imageLiteral(resourceName: "SmallForwardIcon")
+        node.image = task.isCompleted ? #imageLiteral(resourceName: "HeartArrow") : #imageLiteral(resourceName: "SmallForwardIcon")
         node.style.preferredLayoutSize = ASLayoutSize(
-            width: ASDimension(unit: .points, value: 7.clasp),
-            height: ASDimension(unit: .points, value: 11.clasp)
+            width: ASDimension(unit: .points, value: (task.isCompleted ? 20 : 7).clasp),
+            height: ASDimension(unit: .points, value: (task.isCompleted ? 20 : 11).clasp)
         )
         return node
     }()

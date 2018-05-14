@@ -54,7 +54,7 @@ class ScavengerHuntHeaderCellNode: ASCellNode {
     lazy var subtitleNode: ASTextNode = {
         let node = ASTextNode()
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5.clasp
+        paragraphStyle.lineSpacing = 9.clasp
         node.attributedText = NSAttributedString(
             string: "Help Seth and Brandi hold onto every moment!\nThank you for capturing the best day of our lives.",
             attributes: [
@@ -65,7 +65,7 @@ class ScavengerHuntHeaderCellNode: ASCellNode {
         )
         node.maximumNumberOfLines = 2
         node.style.maxWidth = ASDimension(unit: .points, value: 365.clasp)
-        node.style.spacingAfter = 20.clasp
+        node.style.spacingAfter = 16.clasp
         return node
     }()
 
@@ -87,7 +87,7 @@ class ScavengerHuntHeaderCellNode: ASCellNode {
     }()
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let stack = ASStackLayoutSpec(direction: .vertical, spacing: 8.clasp, justifyContent: .start, alignItems: .stretch, children: [titleNode, subtitleNode, countNode])
+        let stack = ASStackLayoutSpec(direction: .vertical, spacing: 20.clasp, justifyContent: .start, alignItems: .stretch, children: [titleNode, subtitleNode, countNode])
         return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 18, bottom: 0, right: 18).clasp, child: stack)
     }
 }

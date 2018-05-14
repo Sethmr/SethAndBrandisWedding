@@ -124,9 +124,13 @@ extension ScavengerHuntViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.row < ScavengerTask.tasks.count else { return }
         let task = ScavengerTask.tasks[indexPath.row]
-        let vc = ScavengerHuntDescriptionViewController(task: task) { [weak self] in
+        let vc = ScavengerHuntDescriptionViewController(task: task) { [weak self] newTask in
             self?.dismiss(animated: true) {
                 self?.tableNode.deselectRow(at: indexPath, animated: true)
+                ScavengerTask.tasks[indexPath.row] = newTask
+                self?.tableNode.reloadRows(at: [indexPath], with: .automatic)
+                ScavengerTask.updateTaskInformation()
+                ScavengerTask.save()
             }
         }
         vc.modalPresentationStyle = .custom

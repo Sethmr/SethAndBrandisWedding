@@ -7,13 +7,15 @@
 //
 
 import AsyncDisplayKit
+import PKHUD
+import Cloudinary
 
 class ScavengerHuntDescriptionViewController: ASViewController<ASDisplayNode>, UINavigationControllerDelegate {
 
-    let task: ScavengerTask
-    let dismissBlock: () -> ()
+    var task: ScavengerTask
+    let dismissBlock: (ScavengerTask) -> ()
 
-    init(task: ScavengerTask, dismissBlock: @escaping () -> ()) {
+    init(task: ScavengerTask, dismissBlock: @escaping (ScavengerTask) -> ()) {
         self.task = task
         self.dismissBlock = dismissBlock
         super.init(node: ASDisplayNode())
@@ -22,7 +24,8 @@ class ScavengerHuntDescriptionViewController: ASViewController<ASDisplayNode>, U
         node.layoutSpecBlock = { [unowned self] _, _ in
             let arrowSpec = ASRelativeLayoutSpec(horizontalPosition: .start, verticalPosition: .start, sizingOption: .minimumSize, child: self.arrowNode)
             let titleSpec = ASRelativeLayoutSpec(horizontalPosition: .center, verticalPosition: .start, sizingOption: .minimumSize, child: self.titleNode)
-            let overlaySpec = ASOverlayLayoutSpec(child: self.imageNode, overlay: self.buttonNode)
+            let imageSpec = ASOverlayLayoutSpec(child: self.backgroundImageNode, overlay: self.imageNode)
+            let overlaySpec = ASOverlayLayoutSpec(child: imageSpec, overlay: self.buttonNode)
             overlaySpec.style.spacingBefore = 92.clasp + ViewController.safeInsets.top
             let stackSpec = ASStackLayoutSpec(direction: .vertical, spacing: 38.clasp, justifyContent: .start, alignItems: .center, children: [overlaySpec, self.subtitleNode])
             return ASWrapperLayoutSpec(layoutElements: [arrowSpec, titleSpec, stackSpec])
@@ -33,14 +36,23 @@ class ScavengerHuntDescriptionViewController: ASViewController<ASDisplayNode>, U
         fatalError("")
     }
 
+    lazy var backgroundImageNode: ASImageNode = {
+        let node = ASImageNode()
+        node.style.preferredLayoutSize = ASLayoutSize(
+            width: ASDimension(unit: .points, value: 334.clasp),
+            height: ASDimension(unit: .points, value: 334.clasp)
+        )
+        node.image = #imageLiteral(resourceName: "DefaultImage")
+        return node
+    }()
+
     lazy var imageNode: ASNetworkImageNode = {
         let node = ASNetworkImageNode()
         node.style.preferredLayoutSize = ASLayoutSize(
             width: ASDimension(unit: .points, value: 334.clasp),
-            height: ASDimension(unit: .points, value: 334.clasp))
-
+            height: ASDimension(unit: .points, value: 334.clasp)
+        )
         node.url = URL(string: task.imageUrl)
-        node.defaultImage = #imageLiteral(resourceName: "DefaultImage")
         return node
     }()
 
@@ -61,7 +73,7 @@ class ScavengerHuntDescriptionViewController: ASViewController<ASDisplayNode>, U
     }()
 
     @objc func backWasTapped(_ sender: ASButtonNode) {
-        dismissBlock()
+        dismissBlock(task)
     }
 
     lazy var buttonNode: ASButtonNode = {
@@ -148,12 +160,46 @@ extension ScavengerHuntDescriptionViewController: UIImagePickerControllerDelegat
         } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             image = originalImage
         }
-        imageNode.image = image
-        picker.dismiss(animated: true)
+        picker.dismiss(animated: true) { [weak self] in
+            self?.uploadImage(image) { urlString in
+                guard let urlString = urlString else { return }
+                self?.task.isCompleted = true
+                self?.task.imageUrl = urlString
+                self?.imageNode.url = URL(string: urlString)
+                self?.backgroundImageNode.image = image
+            }
+        }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
+    }
+
+    func uploadImage(_ image: UIImage?, completion: @escaping (String?) -> ()) {
+        guard let image = image, let data = reduceDataFromImage(amount: 1, image: image) else { completion(nil); return }
+        HUD.show(.progress)
+        CloudinaryService.upload(data: data) { imageUrl in
+            DispatchQueue.main.async {
+                guard let imageUrl = imageUrl else {
+                    HUD.show(.error)
+                    HUD.hide(afterDelay: 0.4)
+                    completion(nil)
+                    return
+                }
+                HUD.show(.success)
+                HUD.hide(afterDelay: 0.4)
+                completion(imageUrl)
+            }
+        }
+    }
+
+    func reduceDataFromImage(amount: CGFloat, image: UIImage?) -> Data? {
+        guard let image = image, let data = UIImageJPEGRepresentation(image, amount) else { return nil }
+        if data.count < 9500000 {
+            return data
+        } else {
+            return reduceDataFromImage(amount: amount - 0.1, image: image)
+        }
     }
 
 }

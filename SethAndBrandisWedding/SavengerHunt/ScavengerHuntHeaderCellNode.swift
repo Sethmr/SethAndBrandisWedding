@@ -23,11 +23,14 @@ class ScavengerHuntHeaderCellNode: ASCellNode {
     }
 
     @objc func tasksUpdated(_ notification: Notification) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .right
         countNode.attributedText = NSAttributedString(
-            string: "\(ScavengerTask.completedCount) out of \(ScavengerTask.tasks.count)",
+            string: "\(ScavengerTask.completedCount) completed out of \(ScavengerTask.tasks.count)",
             attributes: [
-                .font: UIFont.systemFont(ofSize: 30.adjustToScreenSize(), weight: .semibold),
-                .foregroundColor: UIColor.white
+                .font: UIFont.systemFont(ofSize: 16.adjustToScreenSize(), weight: .light),
+                .foregroundColor: UIColor.white,
+                .paragraphStyle: paragraphStyle
             ]
         )
     }

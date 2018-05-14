@@ -37,11 +37,21 @@ class OnboardingCellNode: ASCellNode {
 
     override func didEnterVisibleState() {
         super.didEnterVisibleState()
-        editableTextNode.becomeFirstResponder()
+        if type == .lastPage {
+            delayOnMainThread(0.4) { [weak self] in
+                self?.editableTextNode.becomeFirstResponder()
+            }
+        } else {
+            view.endEditing(true)
+        }
+    }
+
+    override func cellNodeVisibilityEvent(_ event: ASCellNodeVisibilityEvent, in scrollView: UIScrollView?, withCellFrame cellFrame: CGRect) {
+        editableTextNode.resignFirstResponder()
     }
 
     @objc func keyboardWillShow(_ notification: Notification) {
-        guard !isKeyboardVisible else { return }
+        guard type == .lastPage, !isKeyboardVisible else { return }
         keyboardHeight = notification.keyboardEndFrame.height
         isKeyboardUp = true
         setNeedsLayout()
@@ -55,7 +65,7 @@ class OnboardingCellNode: ASCellNode {
 
 
     @objc func keyboardWillHide(_ notification: Notification) {
-        guard isKeyboardVisible else { return }
+        guard type == .lastPage, isKeyboardVisible else { return }
         isKeyboardUp = false
         setNeedsLayout()
         UIView.animate(
@@ -100,7 +110,7 @@ class OnboardingCellNode: ASCellNode {
         node.attributedText = NSAttributedString(
             string: "Enter Full Name",
             attributes: [
-                .font: UIFont.systemFont(ofSize: 34.adjustToScreenSize(), weight: .heavy),
+                .font: UIFont.systemFont(ofSize: 27.adjustToScreenSize(), weight: .semibold),
                 .foregroundColor: UIColor.white
             ]
         )
@@ -170,8 +180,6 @@ class OnboardingCellNode: ASCellNode {
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         switch type {
-        case .firstPage:
-            return buttonNode.finalLayoutSpec(with: ASInsetLayoutSpec(insets: .zero, child: imageNode))
         case .lastPage:
             buttonNode.buttonNode.style.spacingAfter = isKeyboardUp ? keyboardHeight : 0
             buttonNode.buttonNode.style.flexBasis = ASDimension(unit: .points, value: 64.clasp + (isKeyboardUp ? 0 : ViewController.safeInsets.bottom))
@@ -180,6 +188,8 @@ class OnboardingCellNode: ASCellNode {
             let relativeSpec = ASRelativeLayoutSpec(horizontalPosition: .center, verticalPosition: .start, sizingOption: .minimumSize, child: textStack)
             let mainStack = ASStackLayoutSpec(direction: .vertical, spacing: 0, justifyContent: .start, alignItems: .stretch, children: [imageNode, buttonNode.buttonNode])
             return ASOverlayLayoutSpec(child: mainStack, overlay: relativeSpec)
+        default:
+            return buttonNode.finalLayoutSpec(with: ASInsetLayoutSpec(insets: .zero, child: imageNode))
         }
     }
 

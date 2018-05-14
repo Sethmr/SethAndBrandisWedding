@@ -6,24 +6,7 @@
 //  Copyright © 2018 Seth Rininger. All rights reserved.
 //
 
-import UIKit
-
-extension UIFont {
-
-    enum MontserratWeight: String {
-        case bold = "Montserrat-Bold"
-        case light = "Montserrat-Light"
-        case medium = "Montserrat-Medium"
-        case semibold = "Montserrat-SemiBold"
-        case regular = "Montserrat-Regular"
-        case extraBold = "Montserrat-ExtraBold"
-    }
-
-    class func montserratFont(ofSize fontSize: CGFloat, weight: MontserratWeight = .regular) -> UIFont {
-        return UIFont(name: weight.rawValue, size: fontSize)!
-    }
-
-}
+import Foundation
 
 extension NSShadow {
 

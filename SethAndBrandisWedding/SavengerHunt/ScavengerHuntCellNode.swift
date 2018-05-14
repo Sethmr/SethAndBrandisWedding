@@ -6,7 +6,7 @@
 //  Copyright © 2018 Seth Rininger. All rights reserved.
 //
 
-import UIKit
+import AsyncDisplayKit
 
 class ScavengerHuntCellNode: ASCellNode {
 
@@ -23,6 +23,11 @@ class ScavengerHuntCellNode: ASCellNode {
         guard let url = URL(string: task.imageUrl) else { return nil }
         let node = ASNetworkImageNode()
         node.url = URL(string: task.imageUrl)
+        node.style.preferredLayoutSize = ASLayoutSize(
+            width: ASDimension(unit: .points, value: 80.clasp),
+            height: ASDimension(unit: .points, value: 80.clasp)
+        )
+        node.style.spacingBefore = 10.clasp
         return node
     }()
 
@@ -46,6 +51,11 @@ class ScavengerHuntCellNode: ASCellNode {
             ]
         )
         node.maximumNumberOfLines = 1
+        if URL(string: task.imageUrl) != nil {
+            node.style.maxWidth = ASDimension(unit: .points, value: 273.clasp)
+        } else {
+            node.style.maxWidth = ASDimension(unit: .points, value: 365.clasp)
+        }
         return node
     }()
 
@@ -59,7 +69,11 @@ class ScavengerHuntCellNode: ASCellNode {
             ]
         )
         node.maximumNumberOfLines = 2
-        node.style.maxWidth = ASDimension(unit: .points, value: 365.clasp)
+        if URL(string: task.imageUrl) != nil {
+            node.style.maxWidth = ASDimension(unit: .points, value: 279.clasp)
+        } else {
+            node.style.maxWidth = ASDimension(unit: .points, value: 365.clasp)
+        }
         return node
     }()
 
@@ -69,7 +83,7 @@ class ScavengerHuntCellNode: ASCellNode {
         var finalSpec: ASLayoutSpec
         if let imageNode = imageNode {
             let ratioSpec = ASRatioLayoutSpec(ratio: 1, child: imageNode)
-            finalSpec = ASStackLayoutSpec(direction: .horizontal, spacing: 2.clasp, justifyContent: .start, alignItems: .center, children: [ratioSpec, textStack])
+            finalSpec = ASStackLayoutSpec(direction: .horizontal, spacing: 8.clasp, justifyContent: .start, alignItems: .center, children: [ratioSpec, textStack])
         } else {
             finalSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 0, left: 16.clasp, bottom: 0, right: 0), child: textStack)
         }
